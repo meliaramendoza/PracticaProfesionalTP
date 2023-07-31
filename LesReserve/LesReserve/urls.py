@@ -18,10 +18,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from LesReserve.views import reservas, sucursales, recursos, inicio, config
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', views.vista_principal,name='vista_principal'),
     path('', views.vista_login,name='vista_login'),
-   
+    
+    #path('vista_reservas/', views.vista_reservas, name='vista_reservas'),
+    #path('vista_sucursales/', views.vista_sucursales, name='vista_sucursales'),
+    #path('vista_rcursos/', views.vista_recursos, name='vista_recursos'),
+    #path('vista_inicio/', views.vista_inicio, name='vista_inicio'),
+    #path('vista_config/', views.vista_config, name='vista_config'),
+    #path('vista_loginAlt/', views.vista_loginAlt, name='vista_loginAlt'),   
 ]
